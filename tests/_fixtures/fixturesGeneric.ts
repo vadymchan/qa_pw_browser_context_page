@@ -2,15 +2,19 @@ import { test as base } from '@playwright/test';
 import { Logger } from '../../src/common/logger/Logger';
 import { generateNewUserData } from '../../src/common/testData/generateNewUserData';
 
-export const test = base.extend<{
-  page1;
-  page2;
-  user;
-  user1;
-  user2;
-  logger;
-  infoTestLog;
-}>({
+export const test = base.extend<
+  {
+    page1;
+    page2;
+    user;
+    user1;
+    user2;
+    infoTestLog;
+  },
+  {
+    logger;
+  }
+>({
   page1: async ({ page }, use) => {
     await use(page);
   },
