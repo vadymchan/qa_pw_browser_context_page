@@ -96,7 +96,7 @@ test.describe('view article tests', () => {
     await viewArticlePage2.assertArticleAuthorNameIsVisible(user1.username);
   });
 
-  test('View other user\'s new articles in "Your Feed" after following', async ({
+  test('View new articles in Your Feed after following', async ({
     user1,
     page1,
     page2,
@@ -124,7 +124,7 @@ test.describe('view article tests', () => {
     );
   });
 
-  test('View can\'t see other user\'s articles in "Your Feed" after unfollowing', async ({
+  test('No articles in Your Feed after unfollowing', async ({
     user1,
     page1,
     page2,
@@ -152,4 +152,6 @@ test.describe('view article tests', () => {
       user1.username.toLowerCase(),
     );
   });
+
+
 });
